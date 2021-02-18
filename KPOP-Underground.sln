@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KUG.Core", "KUG.Core\KUG.Core.csproj", "{ED0722CD-9884-432F-BE6B-42D1426B5B6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpopUG", "..\..\..\Mapua\2Q2021\COE183P\Machine Problem\KpopUG\KpopUG\KpopUG\KpopUG.csproj", "{F2BCDEAE-FA33-42A5-AA06-409B4506F670}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpopUG", "KUG.Web\KpopUG.csproj", "{F2BCDEAE-FA33-42A5-AA06-409B4506F670}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
