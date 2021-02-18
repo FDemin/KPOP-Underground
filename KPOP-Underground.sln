@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPOP.Core", "KPOP.Core\KPOP.Core.csproj", "{647B1869-D672-442C-A6EC-78645FE3667A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KUG.Core", "KUG.Core\KUG.Core.csproj", "{ED0722CD-9884-432F-BE6B-42D1426B5B6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpopUG", "..\..\..\Mapua\2Q2021\COE183P\Machine Problem\KpopUG\KpopUG\KpopUG\KpopUG.csproj", "{F2BCDEAE-FA33-42A5-AA06-409B4506F670}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{647B1869-D672-442C-A6EC-78645FE3667A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{647B1869-D672-442C-A6EC-78645FE3667A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{647B1869-D672-442C-A6EC-78645FE3667A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{647B1869-D672-442C-A6EC-78645FE3667A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0722CD-9884-432F-BE6B-42D1426B5B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0722CD-9884-432F-BE6B-42D1426B5B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0722CD-9884-432F-BE6B-42D1426B5B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0722CD-9884-432F-BE6B-42D1426B5B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BCDEAE-FA33-42A5-AA06-409B4506F670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BCDEAE-FA33-42A5-AA06-409B4506F670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BCDEAE-FA33-42A5-AA06-409B4506F670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BCDEAE-FA33-42A5-AA06-409B4506F670}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
