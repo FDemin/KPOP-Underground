@@ -21,6 +21,7 @@ namespace KpopUG.Dashboard
             fullName.ReadOnly = true;
             contactNumber.ReadOnly = true;
             EMail.ReadOnly = true;
+            Koinz.ReadOnly = true;
         }
 
         protected void editButton_Click(object sender, EventArgs e)
