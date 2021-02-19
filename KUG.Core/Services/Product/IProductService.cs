@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using KUG.Core.DTO;
+using System.Collections.Generic;
 
 namespace KUG.Core.Services.Product
 {
@@ -8,6 +9,6 @@ namespace KUG.Core.Services.Product
         // show all products from a k-pop group
         // filter products by merch/album
         // filter products by name
-
+        IEnumerable<ProductDTO> LoadProducts();
     }
 }
