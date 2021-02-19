@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Profile" Language="C#" MasterPageFile="~/Dashboard/Dashboard.Master "AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="KpopUG.Dashboard.Profile" %>
+﻿<%@ Page Title="Profile" Language="C#" MasterPageFile="~/Dashboard/Dashboard.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="KpopUG.Dashboard.Profile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -96,7 +96,7 @@
               <!-- ASP TB -->
               <asp:TextBox ID="Koinz" CssClass="tb1" placeholder="200Koinz" runat="server"></asp:TextBox>
                 <%--<a href="#">Edit</a>--%>
-                <asp:Button ID="editButton" runat="server" ReadOnly="true" Text="Edit" />
+                <asp:Button ID="editButton" runat="server" ReadOnly="true" Text="Edit" OnClick="editButton_Click" />
                 <asp:Button ID="confirmButton" runat="server"  ReadOnly="true" Text="Confirm" />
             </div>
 
