@@ -10,10 +10,7 @@ namespace KUG.Core.DTO
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Details { get; set; }
-        public double Discount { get; set; }
         public int Cost { get; set; }
-        public DateTime ReleaseDate { get; set; }
         public int CategoryID { get; set; }
         public int GroupID { get; set; }
     }

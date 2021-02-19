@@ -13,5 +13,10 @@ namespace KpopUG.Dashboard
         {
 
         }
+
+        protected void searchButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect($@"~\Dashboard\Products.aspx?name={searchBox.Text.Trim()}");
+        }
     }
 }

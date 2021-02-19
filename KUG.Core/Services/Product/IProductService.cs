@@ -10,5 +10,7 @@ namespace KUG.Core.Services.Product
         // filter products by merch/album
         // filter products by name
         IEnumerable<ProductDTO> LoadProducts();
+        IEnumerable<ProductDTO> LoadProducts(string search);
+        IEnumerable<ProductDTO> LoadProducts(string search, int categoryId = -1, int groupId = -1);
     }
 }

@@ -37,7 +37,7 @@
                         <!--ASP.NET TEXTBOX for SEARCHBAR-->
                         <asp:TextBox ID="searchBox" CssClass="form-control me-2" placeholder="Search Product" runat="server"></asp:TextBox>
                         <!--ASP.NET Button for SEARCH-->
-                        <asp:Button ID="searchButton" runat="server" CssClass="btn btn-outline-success" Text="Search" />
+                        <asp:Button ID="searchButton" runat="server" CssClass="btn btn-outline-success" Text="Search" OnClick="searchButton_Click" required="true"/>
                     </div>
                 </div>
             </div>
