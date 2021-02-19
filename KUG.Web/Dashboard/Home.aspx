@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Dashboard/Dashboard.Master "AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KpopUG.Dashboard.Home1" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Dashboard/Dashboard.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KpopUG.Dashboard.Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta charset="utf-8">

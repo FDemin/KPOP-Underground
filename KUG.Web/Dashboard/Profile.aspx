@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Profile" Language="C#" MasterPageFile="~/Dashboard/Dashboard.Master "AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="KpopUG.Dashboard.Profile" %>
+﻿<%@ Page Title="Profile" Language="C#" MasterPageFile="~/Dashboard/Dashboard.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="KpopUG.Dashboard.Profile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -15,7 +15,6 @@
             border-radius: 3px;
         }
 
-     
 
         span.price {
             float: right;
@@ -23,7 +22,6 @@
         }
         /*  */
 
-       
         #prof{
             position: absolute;
             top: 150px;
@@ -52,6 +50,7 @@
                text-align:center;
                
            }
+           /*.hidden { display: none; }*/
     </style>
     <link href="../Styles/payment.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -82,20 +81,22 @@
                 <h2>Profile</h2>
                   <label >Full Name</label>
               <!-- ASP TB -->
-              <asp:TextBox ID="fullName" CssClass="tb1" placeholder="Juan Dela Cruz" runat="server"></asp:TextBox>
+              <asp:TextBox ID="fullName" CssClass="tb1" placeholder="Juan Dela Cruz" ReadOnly="true" runat="server"></asp:TextBox>
 
                 <label >Email</label>
               <!-- ASP TB -->
-              <asp:TextBox ID="EMail" CssClass="tb1" placeholder="juandelacruz@test.com" runat="server"></asp:TextBox>
+              <asp:TextBox ID="EMail" CssClass="tb1" placeholder="juandelacruz@test.com" ReadOnly="true" runat="server"></asp:TextBox>
            
                 <label>Contact Number</label>
               <!-- ASP TB -->
-              <asp:TextBox ID="contactNumber" CssClass="tb1" placeholder="0999 999 9999" runat="server"></asp:TextBox>
+              <asp:TextBox ID="contactNumber" CssClass="tb1" placeholder="0999 999 9999" ReadOnly="true" runat="server"></asp:TextBox>
 
                 <label >Koinz</label>
               <!-- ASP TB -->
-              <asp:TextBox ID="Koinz" CssClass="tb1" placeholder="200Koinz" runat="server"></asp:TextBox>
-                <a href="#">Edit</a>
+              <asp:TextBox ID="Koinz" CssClass="tb1" placeholder="0.00 Koinz" ReadOnly="true" runat="server"></asp:TextBox>
+                <%--<a href="#">Edit</a>--%>
+                <asp:Button ID="editButton" runat="server" Text="Edit" OnClick="editButton_Click" />
+                <asp:Button ID="confirmButton" runat="server" Text="Confirm" OnClick="confirmButton_Click"/>
             </div>
 
         </div>
