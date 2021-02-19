@@ -8,5 +8,6 @@ namespace KUG.Core.Services.User
 {
     public interface IUserService
     {
+        void DisplayUser(string FullName, string ContactNumber, string Email);
     }
 }

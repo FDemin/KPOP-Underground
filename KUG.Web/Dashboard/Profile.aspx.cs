@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KUG.Core.Services.User;
+using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +11,8 @@ namespace KpopUG.Dashboard
 {
     public partial class Profile : System.Web.UI.Page
     {
+        [Dependency]
+        public IUserService userService { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             confirmButton.Visible = false;

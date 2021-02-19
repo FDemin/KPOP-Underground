@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace KUG.Core.Services.User
 {
@@ -13,6 +14,11 @@ namespace KUG.Core.Services.User
         public UserService(string connectionString)
         {
             this.connectionString = connectionString;
+        }
+
+        void IUserService.DisplayUser(string FullName, string ContactNumber, string Email)
+        {
+
         }
     }
 }
