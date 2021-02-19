@@ -17,6 +17,11 @@ namespace KpopUG.Dashboard
         protected void Page_Load(object sender, EventArgs e)
         {
             confirmButton.Visible = false;
+
+            fullName.ReadOnly = true;
+            contactNumber.ReadOnly = true;
+            EMail.ReadOnly = true;
+            Koinz.ReadOnly = true;
         }
 
         protected void editButton_Click(object sender, EventArgs e)
