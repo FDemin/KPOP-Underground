@@ -36,8 +36,8 @@ namespace KpopUG.App_Start
 		private static void RegisterDependencies( IUnityContainer container )
 		{
 			container.RegisterType<IAuthService, AuthService>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["KPOP-DB"].ConnectionString));
-			container.RegisterType<IUserService, UserService>(new ContainerControlledLifetimeManager());
-			container.RegisterType<ITransactionService, TransactionService>(new ContainerControlledLifetimeManager());
+			container.RegisterType<IUserService, UserService>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["KPOP-DB"].ConnectionString));
+			container.RegisterType<ITransactionService, TransactionService>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["KPOP-DB"].ConnectionString));
 		}
 	}
 }
