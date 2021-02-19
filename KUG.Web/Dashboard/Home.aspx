@@ -69,7 +69,7 @@
 
     </main>
     <article>
-        <h2>News</h2>
+        <h2>Trending News</h2>
         <blockquote class="twitter-tweet">
             <p lang="en" dir="ltr">
                 IZ*ONE ONLINE CONCERT [ONE, THE STORY] <a href="https://twitter.com/official_izone?ref_src=twsrc%5Etfw">@official_izone</a><br>
