@@ -1,6 +1,8 @@
 using System.Configuration;
 using System.Web;
 using KUG.Core.Services.Auth;
+using KUG.Core.Services.Transaction;
+using KUG.Core.Services.User;
 using Microsoft.Practices.Unity;
 using Unity.WebForms;
 
@@ -34,6 +36,8 @@ namespace KpopUG.App_Start
 		private static void RegisterDependencies( IUnityContainer container )
 		{
 			container.RegisterType<IAuthService, AuthService>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["KPOP-DB"].ConnectionString));
+			container.RegisterType<IUserService, UserService>(new ContainerControlledLifetimeManager());
+			container.RegisterType<ITransactionService, TransactionService>(new ContainerControlledLifetimeManager());
 		}
 	}
 }
