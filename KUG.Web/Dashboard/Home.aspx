@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KpopUG.Dashboard.Home" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Dashboard/Dashboard.Master "AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KpopUG.Dashboard.Home1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta charset="utf-8">
@@ -9,12 +9,11 @@
     <title>Kpop Underground - Home</title>
 
     <!-- CSS -->
-    <link href="home.css" rel="stylesheet" />
+    <link href="../Styles/home.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main style="padding-top: 100px;">
-
 
         <!-- Slideshow Start -->
         <section id="slideshow">
@@ -86,6 +85,6 @@
     </article>
 
     <!-- Slideshow JS -->
-    <script src="banner.js"></script>
+    <script src="../Scripts/banner.js"></script>
     <!-- Slideshow JS end-->
 </asp:Content>

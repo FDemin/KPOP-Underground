@@ -11,7 +11,7 @@ namespace KpopUG.Dashboard
 {
 
 
-    public partial class Home
+    public partial class Home1
     {
     }
 }

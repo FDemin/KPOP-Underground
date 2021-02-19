@@ -31,6 +31,8 @@ namespace KpopUG.Auth
                 Session["Username"] = inputUsername.Text.Trim();
 
                 lblSuccess.Visible = true;
+
+                Response.Redirect("~/Dashboard/Home.aspx");
             }
         }
 
