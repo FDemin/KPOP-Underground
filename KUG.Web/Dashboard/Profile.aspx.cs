@@ -85,7 +85,6 @@ namespace KpopUG.Dashboard
                 sqlCmd.Parameters.AddWithValue("@hash_CVV", EncryptString(key, CVV.Text.Trim()));
                 sqlCmd.Parameters.AddWithValue("@Amt", value);
                 sqlCmd.ExecuteNonQuery();
-                //Clear();
                 Response.Redirect("Profile.aspx");
             }
         }
