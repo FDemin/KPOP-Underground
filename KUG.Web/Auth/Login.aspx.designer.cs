@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KpopUG
+namespace KpopUG.Auth
 {
 
 
-    public partial class WebForm2
+    public partial class WebForm1
     {
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace KpopUG
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// CustomValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
 
         /// <summary>
         /// inputUsername control.
@@ -51,13 +51,13 @@ namespace KpopUG
         protected global::System.Web.UI.WebControls.TextBox inputUsername;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// CustomValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator2;
 
         /// <summary>
         /// inputPassword control.
@@ -85,15 +85,6 @@ namespace KpopUG
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Login;
-
-        /// <summary>
-        /// lblError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
         /// lblSuccess control.

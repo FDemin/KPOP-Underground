@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace KpopUG
+namespace KpopUG.Transaction
 {
-    public partial class SignUp : System.Web.UI.Page
+    public partial class Transaction : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
