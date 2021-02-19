@@ -97,7 +97,7 @@
               <asp:TextBox ID="Koinz" CssClass="tb1" placeholder="200Koinz" runat="server"></asp:TextBox>
                 <%--<a href="#">Edit</a>--%>
                 <asp:Button ID="editButton" runat="server" ReadOnly="true" Text="Edit" />
-<asp:Button ID="confirmButton" runat="server"  ReadOnly="true" Text="Confirm" />
+                <asp:Button ID="confirmButton" runat="server"  ReadOnly="true" Text="Confirm" />
             </div>
 
         </div>
