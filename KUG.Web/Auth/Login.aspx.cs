@@ -24,6 +24,7 @@ namespace KpopUG.Auth
                 {
                     inputUsername.Text = Request.Cookies["Username"].Value;
                     inputPassword.Attributes["value"] = Request.Cookies["Password"].Value;
+                    rememberUser.Checked = true;
                 }
             }
             lblSuccess.Visible = false;
@@ -38,17 +39,10 @@ namespace KpopUG.Auth
                 Session["UserID"] = AuthService.GetUser(inputUsername.Text.Trim(), inputPassword.Text.Trim());
                 Session["Username"] = inputUsername.Text.Trim();
 
-                if (rememberUser.Checked)
-                {
-                    Response.Cookies["Username"].Expires = DateTime.Now.AddDays(30);
-                    Response.Cookies["Password"].Expires = DateTime.Now.AddDays(30);
-                }
-                else
-                {
-                    Response.Cookies["Username"].Expires = DateTime.Now.AddDays(-1);
-                    Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
 
-                }
+                Response.Cookies["Username"].Expires = DateTime.Now.AddDays(rememberUser.Checked ? 30 : -1);
+                Response.Cookies["Password"].Expires = DateTime.Now.AddDays(rememberUser.Checked ? 30 : -1);
+
                 Response.Cookies["Username"].Value = inputUsername.Text.Trim();
                 Response.Cookies["Password"].Value = inputPassword.Text.Trim();
 
