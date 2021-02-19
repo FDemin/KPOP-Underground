@@ -18,6 +18,14 @@ namespace KpopUG.Auth
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Request.Cookies["Username"] != null && Request.Cookies["Password"] != null)
+                {
+                    inputUsername.Text = Request.Cookies["Username"].Value;
+                    inputPassword.Attributes["value"] = Request.Cookies["Password"].Value;
+                }
+            }
             lblSuccess.Visible = false;
         }
 
@@ -29,6 +37,20 @@ namespace KpopUG.Auth
             {
                 Session["UserID"] = AuthService.GetUser(inputUsername.Text.Trim(), inputPassword.Text.Trim());
                 Session["Username"] = inputUsername.Text.Trim();
+
+                if (rememberUser.Checked)
+                {
+                    Response.Cookies["Username"].Expires = DateTime.Now.AddDays(30);
+                    Response.Cookies["Password"].Expires = DateTime.Now.AddDays(30);
+                }
+                else
+                {
+                    Response.Cookies["Username"].Expires = DateTime.Now.AddDays(-1);
+                    Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+
+                }
+                Response.Cookies["Username"].Value = inputUsername.Text.Trim();
+                Response.Cookies["Password"].Value = inputPassword.Text.Trim();
 
                 lblSuccess.Visible = true;
 
