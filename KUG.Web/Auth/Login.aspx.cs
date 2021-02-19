@@ -38,6 +38,8 @@ namespace KpopUG.Auth
                 Session["UserID"] = AuthService.GetUser(inputUsername.Text.Trim(), inputPassword.Text.Trim());
                 Session["Username"] = inputUsername.Text.Trim();
 
+
+
                 if (rememberUser.Checked)
                 {
                     Response.Cookies["Username"].Expires = DateTime.Now.AddDays(30);
@@ -53,7 +55,6 @@ namespace KpopUG.Auth
                 Response.Cookies["Password"].Value = inputPassword.Text.Trim();
 
                 lblSuccess.Visible = true;
-
                 Response.Redirect("~/Dashboard/Home.aspx");
             }
         }

@@ -6,5 +6,7 @@
         bool UserExists(string username);
         int GetUser(string username, string password);
         void CreateAccount(string username, string password, string fullName, string email, string contactNumber);
+
+        //void GetUserID(int UID);
     }
 }

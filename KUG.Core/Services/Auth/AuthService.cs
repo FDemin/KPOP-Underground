@@ -62,6 +62,7 @@ namespace KUG.Core.Services.Auth
             }
         }
 
+
         void IAuthService.CreateAccount(string username, string password, string fullName, string email, string contactNumber)
         {
             using (var conn = new SqlConnection(connectionString))

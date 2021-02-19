@@ -65,10 +65,11 @@
         <div class="col-25">
             <div class="container">
                 <h2>Top-Up</h2>
-                <asp:Button CssClass="btn1" ID="top250" runat="server" Text="250" />
-                <asp:Button CssClass="btn1" ID="top500" runat="server" Text="500" />
-                <asp:Button CssClass="btn1" ID="top1000" runat="server" Text="1000" />
-                <asp:Button CssClass="btn1" ID="top2000" runat="server" Text="2000" />
+                <asp:Button CssClass="btn1" ID="top250" runat="server" Text="250" OnClick="top250_Click" />
+                <asp:Button CssClass="btn1" ID="top500" runat="server" Text="500" OnClick="top500_Click" />
+                <asp:Button CssClass="btn1" ID="top1000" runat="server" Text="1000" OnClick="top1000_Click" />
+                <asp:Button CssClass="btn1" ID="top2000" runat="server" Text="2000" OnClick="top2000_Click" />
+                <asp:TextBox ID="Amount" runat="server" ReadOnly="true" ></asp:TextBox>
             </div>
         </div>
 
@@ -96,8 +97,8 @@
               <!-- ASP TB -->
               <asp:TextBox ID="Koinz" CssClass="tb1" placeholder="200Koinz" runat="server"></asp:TextBox>
                 <%--<a href="#">Edit</a>--%>
-                <asp:Button ID="editButton" runat="server" ReadOnly="true" Text="Edit" OnClick="editButton_Click" />
-                <asp:Button ID="confirmButton" runat="server"  ReadOnly="true" Text="Confirm" />
+                <%--<asp:Button ID="editButton" runat="server" ReadOnly="true" Text="Edit" OnClick="editButton_Click" />
+                <asp:Button ID="confirmButton" runat="server"  ReadOnly="true" Text="Confirm" />--%>
             </div>
 
         </div>
@@ -160,7 +161,7 @@
           </div> 
         </div>
       <!-- ASP BUTTON -->
-      <asp:Button ID="payButton" runat="server" Text="Pay" CssClass="btns"  />
+      <asp:Button ID="payButton" runat="server" Text="Pay" CssClass="btns" OnClick="payButton_Click"  />
         
     </div>
   </div>
