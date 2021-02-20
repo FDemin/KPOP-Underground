@@ -20,35 +20,15 @@ namespace KUG.Core.Services.Product
 
         IEnumerable<ProductDTO> IProductService.LoadProducts()
         {
-            using (var conn = new SqlConnection(connectionString))
-            using (var command = new SqlCommand("LoadProducts", conn) { CommandType = System.Data.CommandType.StoredProcedure })
-            {
-                conn.Open();
-
-                using(var rdr = command.ExecuteReader())
-                {
-                    return rdr.ToProducts();
-                }
-            }
+            return LoadProducts(null, -1, -1);
         }
 
         IEnumerable<ProductDTO> IProductService.LoadProducts(string search)
         {
-            using (var conn = new SqlConnection(connectionString))
-            using (var command = new SqlCommand("LoadProducts", conn) { CommandType = System.Data.CommandType.StoredProcedure })
-            {
-                conn.Open();
-
-                command.Parameters.AddWithValue("@search", search);
-
-                using (var rdr = command.ExecuteReader())
-                {
-                    return rdr.ToProducts();
-                }
-            }
+            return LoadProducts(search, -1, -1);
         }
 
-        IEnumerable<ProductDTO> IProductService.LoadProducts(string search, int categoryId, int groupId)
+        public IEnumerable<ProductDTO> LoadProducts(string search, int categoryId, int groupId)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var command = new SqlCommand("LoadProducts", conn) { CommandType = System.Data.CommandType.StoredProcedure })
@@ -61,7 +41,47 @@ namespace KUG.Core.Services.Product
 
                 using (var rdr = command.ExecuteReader())
                 {
-                    return rdr.ToProducts();
+                    while(rdr.Read())
+                    {
+                        yield return rdr.ToProduct();
+                    }
+                    
+                }
+            }
+        }
+
+        IEnumerable<CategoryDTO> IProductService.LoadCategories()
+        {
+            using (var conn = new SqlConnection(connectionString))
+            using (var command = new SqlCommand("LoadCategories", conn) { CommandType = System.Data.CommandType.StoredProcedure })
+            {
+                conn.Open();
+
+                using (var rdr = command.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        yield return rdr.ToCategory();
+                    }
+
+                }
+            }
+        }
+
+        IEnumerable<GroupDTO> IProductService.LoadGroups()
+        {
+            using (var conn = new SqlConnection(connectionString))
+            using (var command = new SqlCommand("LoadGroups", conn) { CommandType = System.Data.CommandType.StoredProcedure })
+            {
+                conn.Open();
+
+                using (var rdr = command.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        yield return rdr.ToGroup();
+                    }
+
                 }
             }
         }

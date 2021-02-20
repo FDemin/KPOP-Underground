@@ -1,6 +1,7 @@
 using System.Configuration;
 using System.Web;
 using KUG.Core.Services.Auth;
+using KUG.Core.Services.Product;
 using KUG.Core.Services.Transaction;
 using KUG.Core.Services.User;
 using Microsoft.Practices.Unity;
@@ -38,6 +39,7 @@ namespace KpopUG.App_Start
 			container.RegisterType<IAuthService, AuthService>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["KPOP-DB"].ConnectionString));
 			container.RegisterType<IUserService, UserService>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["KPOP-DB"].ConnectionString));
 			container.RegisterType<ITransactionService, TransactionService>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["KPOP-DB"].ConnectionString));
+			container.RegisterType<IProductService, ProductService>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["KPOP-DB"].ConnectionString));
 		}
 	}
 }

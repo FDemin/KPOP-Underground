@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace KUG.Core.DTO
 {
-    public class ProductDTO
+    public class GroupDTO
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int Cost { get; set; }
     }
 }

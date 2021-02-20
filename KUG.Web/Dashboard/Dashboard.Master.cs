@@ -11,12 +11,20 @@ namespace KpopUG.Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                if(Request.Cookies["name"] != null)
+                {
+                    searchBox.Text = Request.Cookies["name"].Value;
+                }
+            }
         }
 
         protected void searchButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect($@"~\Dashboard\Products.aspx?name={searchBox.Text.Trim()}");
+            Session["name"] = searchBox.Text.Trim();
+
+            Response.Redirect($@"~\Dashboard\Products.aspx{(!string.IsNullOrWhiteSpace(searchBox.Text.Trim()) ? $"?name={searchBox.Text.Trim()}" : null)}");
         }
     }
 }

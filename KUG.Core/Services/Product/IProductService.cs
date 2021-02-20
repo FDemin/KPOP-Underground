@@ -12,5 +12,7 @@ namespace KUG.Core.Services.Product
         IEnumerable<ProductDTO> LoadProducts();
         IEnumerable<ProductDTO> LoadProducts(string search);
         IEnumerable<ProductDTO> LoadProducts(string search, int categoryId = -1, int groupId = -1);
+        IEnumerable<CategoryDTO> LoadCategories();
+        IEnumerable<GroupDTO> LoadGroups();
     }
 }

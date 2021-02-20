@@ -46,26 +46,36 @@
         <!-- slideshow end -->
 
         <h1>Featured K-Pop Artists</h1>
-        <a href="#">
-            <img src="../image/quick-search/bp-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/bts-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/exo-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/itzy-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/iz-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/rv-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/tw-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/sj-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/bb-logo.png" style="width: 150px; height: 150px;" /></a>
-        <a href="#">
-            <img src="../image/quick-search/iu-logo.png" style="width: 150px; height: 150px;" /></a>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=2">
+            <img src="../image/quick-search/bp-logo.png" style="width: 150px; height: 150px;" />
+        </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=6">
+            <img src="../image/quick-search/bts-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=7">
+            <img src="../image/quick-search/exo-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=5">
+            <img src="../image/quick-search/itzy-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=10">
+            <img src="../image/quick-search/iz-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=3">
+            <img src="../image/quick-search/rv-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=1">
+            <img src="../image/quick-search/tw-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=9">
+            <img src="../image/quick-search/sj-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=8">
+            <img src="../image/quick-search/bb-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
+        <asp:Hyperlink runat="server" NavigateUrl="~\Dashboard\Products.aspx?GID=4">
+            <img src="../image/quick-search/iu-logo.png" style="width: 150px; height: 150px;" />
+            </asp:Hyperlink>
 
     </main>
     <article>

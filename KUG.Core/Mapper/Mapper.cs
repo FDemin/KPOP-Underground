@@ -14,7 +14,6 @@ namespace KUG.Core.Mapper
         {
             UserDTO output = new UserDTO();
 
-            reader.Read();
             output.FullName = reader.GetString(reader.GetOrdinal("Name"));
             output.EmailAddress = reader.GetString(reader.GetOrdinal("EmailAddress"));
             output.ContactNumber = reader.GetString(reader.GetOrdinal("ContactNumber"));
@@ -23,48 +22,35 @@ namespace KUG.Core.Mapper
             return output;
         }
 
-        public static IEnumerable<UserDTO> ToUsers(this SqlDataReader reader)
-        {
-            UserDTO output = new UserDTO();
-            while(reader.Read())
-            {
-                output.FullName = reader.GetString(reader.GetOrdinal("Name"));
-                output.EmailAddress = reader.GetString(reader.GetOrdinal("EmailAddress"));
-                output.ContactNumber = reader.GetString(reader.GetOrdinal("ContactNumber"));
-                output.Koinz = reader.GetInt32(reader.GetOrdinal("Koinz"));
-
-                yield return output;
-            }
-        }
-
         public static ProductDTO ToProduct(this SqlDataReader reader)
         {
             ProductDTO output = new ProductDTO();
 
-            reader.Read();
             output.ID = reader.GetInt32(reader.GetOrdinal("ProductID"));
             output.Name = reader.GetString(reader.GetOrdinal("Name"));
             output.Cost = Convert.ToInt32(reader.GetDecimal(reader.GetOrdinal("Cost")));
-            output.CategoryID = reader.GetInt32(reader.GetOrdinal("CategoryID"));
-            output.GroupID = reader.GetInt32(reader.GetOrdinal("GroupID"));
 
             return output;
         }
 
-        public static IEnumerable<ProductDTO> ToProducts(this SqlDataReader reader)
+        public static GroupDTO ToGroup(this SqlDataReader reader)
         {
-            ProductDTO output = new ProductDTO();
-            
-            while (reader.Read())
-            {
-                output.ID = reader.GetInt32(reader.GetOrdinal("ProductID"));
-                output.Name = reader.GetString(reader.GetOrdinal("Name"));
-                output.Cost = Convert.ToInt32(reader.GetDecimal(reader.GetOrdinal("Cost")));
-                output.CategoryID = reader.GetInt32(reader.GetOrdinal("CategoryID"));
-                output.GroupID = reader.GetInt32(reader.GetOrdinal("GroupID"));
+            GroupDTO output = new GroupDTO();
 
-                yield return output;
-            }
+            output.ID = reader.GetInt32(reader.GetOrdinal("GroupID"));
+            output.Name = reader.GetString(reader.GetOrdinal("Name"));
+
+            return output;
+        }
+
+        public static CategoryDTO ToCategory(this SqlDataReader reader)
+        {
+            CategoryDTO output = new CategoryDTO();
+
+            output.ID = reader.GetInt32(reader.GetOrdinal("CategoryID"));
+            output.Name = reader.GetString(reader.GetOrdinal("Name"));
+
+            return output;
         }
     }
 }
